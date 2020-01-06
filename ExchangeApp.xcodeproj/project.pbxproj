@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B11D46C4031B1CEB2AB4FD4E /* Pods_ExchangeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4006EB324135BBBCC3C1F3 /* Pods_ExchangeApp.framework */; };
+		C6AAEB2B23C2F50C004D7674 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AAEB2A23C2F50C004D7674 /* LoginViewModel.swift */; };
+		C6AAEB2D23C2F52C004D7674 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AAEB2C23C2F52C004D7674 /* LoginViewModelProtocol.swift */; };
+		C6AAEB3023C2F975004D7674 /* moneyIntro.json in Resources */ = {isa = PBXBuildFile; fileRef = C6AAEB2F23C2F975004D7674 /* moneyIntro.json */; };
 		C6C150E723C16371004AB0EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C150E623C16371004AB0EE /* AppDelegate.swift */; };
 		C6C150E923C16371004AB0EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C150E823C16371004AB0EE /* SceneDelegate.swift */; };
 		C6C150EB23C16371004AB0EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C150EA23C16371004AB0EE /* ViewController.swift */; };
@@ -30,6 +33,9 @@
 		2B4006EB324135BBBCC3C1F3 /* Pods_ExchangeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExchangeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF6128380E5034A62019841 /* Pods-ExchangeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeApp.debug.xcconfig"; path = "Target Support Files/Pods-ExchangeApp/Pods-ExchangeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		78A25CD8DAC401B904891E4A /* Pods-ExchangeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeApp.release.xcconfig"; path = "Target Support Files/Pods-ExchangeApp/Pods-ExchangeApp.release.xcconfig"; sourceTree = "<group>"; };
+		C6AAEB2A23C2F50C004D7674 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C6AAEB2C23C2F52C004D7674 /* LoginViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelProtocol.swift; sourceTree = "<group>"; };
+		C6AAEB2F23C2F975004D7674 /* moneyIntro.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moneyIntro.json; sourceTree = "<group>"; };
 		C6C150E323C16371004AB0EE /* ExchangeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C150E623C16371004AB0EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6C150E823C16371004AB0EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +85,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C6AAEB2923C2F4FC004D7674 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C6AAEB2A23C2F50C004D7674 /* LoginViewModel.swift */,
+				C6AAEB2C23C2F52C004D7674 /* LoginViewModelProtocol.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C6AAEB2E23C2F94C004D7674 /* LottieFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C6AAEB2F23C2F975004D7674 /* moneyIntro.json */,
+			);
+			path = LottieFiles;
+			sourceTree = "<group>";
+		};
 		C6C150DA23C16371004AB0EE = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +139,7 @@
 				C6C150F123C16375004AB0EE /* LaunchScreen.storyboard */,
 				C6C150EC23C16371004AB0EE /* Main.storyboard */,
 				C6C1511323C2E028004AB0EE /* Login */,
+				C6AAEB2E23C2F94C004D7674 /* LottieFiles */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,6 +157,7 @@
 		C6C150FC23C2ADF0004AB0EE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C6AAEB2923C2F4FC004D7674 /* Login */,
 				C6C1511423C2E0AC004AB0EE /* Rates */,
 				C6C150FE23C2AE27004AB0EE /* Remote */,
 			);
@@ -240,6 +265,7 @@
 				C6C150F323C16375004AB0EE /* LaunchScreen.storyboard in Resources */,
 				C6C150F023C16375004AB0EE /* Assets.xcassets in Resources */,
 				C6C150EE23C16371004AB0EE /* Main.storyboard in Resources */,
+				C6AAEB3023C2F975004D7674 /* moneyIntro.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,8 +331,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6AAEB2B23C2F50C004D7674 /* LoginViewModel.swift in Sources */,
 				C6C1510823C2B419004AB0EE /* LogInterceptor.swift in Sources */,
 				C6C1510E23C2B555004AB0EE /* ExchangeRatesEndPoint.swift in Sources */,
+				C6AAEB2D23C2F52C004D7674 /* LoginViewModelProtocol.swift in Sources */,
 				C6C1511823C2E139004AB0EE /* RatesViewModel.swift in Sources */,
 				C6C1510423C2B326004AB0EE /* World.swift in Sources */,
 				C6C1511223C2BBB1004AB0EE /* ErrorAPI.swift in Sources */,
@@ -465,6 +493,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6296265YS;
 				INFOPLIST_FILE = ExchangeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,6 +513,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N6296265YS;
 				INFOPLIST_FILE = ExchangeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

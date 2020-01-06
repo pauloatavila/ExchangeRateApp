@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,172 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExchangeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NA7-ZB-n8x">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTe-4U-TME" customClass="AnimationView" customModule="Lottie">
+                                        <rect key="frame" x="97" y="57" width="90" height="90"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="eaX-Gr-fR3"/>
+                                            <constraint firstAttribute="width" constant="90" id="wnm-qM-8Ue"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="moneyIntro"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDa-dR-adE">
+                                        <rect key="frame" x="195" y="73.5" width="120.5" height="57"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Conversão
+de moedas</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.82352941176470584" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="mDa-dR-adE" firstAttribute="centerY" secondItem="tTe-4U-TME" secondAttribute="centerY" id="0EI-dq-I1A"/>
+                                    <constraint firstItem="tTe-4U-TME" firstAttribute="centerY" secondItem="NA7-ZB-n8x" secondAttribute="centerY" constant="12" id="4by-p1-RUO"/>
+                                    <constraint firstAttribute="height" constant="180" id="D5c-dU-DGB"/>
+                                    <constraint firstItem="mDa-dR-adE" firstAttribute="leading" secondItem="tTe-4U-TME" secondAttribute="trailing" constant="8" id="H4a-j2-H6c"/>
+                                    <constraint firstItem="tTe-4U-TME" firstAttribute="centerX" secondItem="NA7-ZB-n8x" secondAttribute="centerX" constant="-65" id="P6k-Bz-jTj"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tMI-u8-6cG">
+                                <rect key="frame" x="50" y="362.5" width="314" height="171"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gg-Bi-4dK">
+                                        <rect key="frame" x="0.0" y="0.0" width="48.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuário ou senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Le2-ej-2Ot">
+                                        <rect key="frame" x="0.0" y="39" width="314" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="CCV-Td-Gcp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vbM-yd-hG4">
+                                        <rect key="frame" x="0.0" y="88" width="314" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="iF3-Xq-ii7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVg-Hn-u8k">
+                                        <rect key="frame" x="0.0" y="137" width="314" height="34"/>
+                                        <color key="backgroundColor" red="0.97647058819999999" green="0.82352941180000006" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="GE3-NO-xCd"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Entrar"/>
+                                        <connections>
+                                            <action selector="logginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cZn-YY-JOn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gVg-Hn-u8k" firstAttribute="leading" secondItem="tMI-u8-6cG" secondAttribute="leading" id="K3e-bA-BF5"/>
+                                    <constraint firstAttribute="trailing" secondItem="gVg-Hn-u8k" secondAttribute="trailing" id="jVl-dr-OjP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Le2-ej-2Ot" secondAttribute="trailing" id="pk2-vf-mEt"/>
+                                    <constraint firstAttribute="trailing" secondItem="vbM-yd-hG4" secondAttribute="trailing" id="teo-R7-K6p"/>
+                                    <constraint firstItem="vbM-yd-hG4" firstAttribute="leading" secondItem="tMI-u8-6cG" secondAttribute="leading" id="xXD-Pt-NZC"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mI0-xg-u8I">
+                                <rect key="frame" x="50" y="816" width="314" height="34"/>
+                                <color key="backgroundColor" red="0.24313725490196078" green="0.28235294117647058" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="47i-ot-1FO"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="   Entrar com Google" image="google">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="googleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aWg-Wa-wjv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4l-tD-BMD">
+                                <rect key="frame" x="50" y="772" width="314" height="34"/>
+                                <color key="backgroundColor" red="0.24313725489999999" green="0.28235294119999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="k8s-3b-7A2"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="   Entrar com Twitter" image="twitter"/>
+                                <connections>
+                                    <action selector="twitterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XLX-hx-kyd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCr-i8-M5i">
+                                <rect key="frame" x="50" y="728" width="314" height="34"/>
+                                <color key="backgroundColor" red="0.24313725489999999" green="0.28235294119999998" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="ubw-Zl-zob"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="   Entrar com Facebook" image="facebook"/>
+                                <connections>
+                                    <action selector="facebookButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dbf-tO-EUj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="W4l-tD-BMD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="2LE-sr-KGi"/>
+                            <constraint firstItem="mI0-xg-u8I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Ih-l5-42B"/>
+                            <constraint firstItem="tMI-u8-6cG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ahs-mo-2p0"/>
+                            <constraint firstItem="NA7-ZB-n8x" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="C5t-vX-OPC"/>
+                            <constraint firstItem="tMI-u8-6cG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="DhB-Fa-VTk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W4l-tD-BMD" secondAttribute="trailing" constant="50" id="EUH-ZX-vpF"/>
+                            <constraint firstItem="NA7-ZB-n8x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H1E-9h-2Iq"/>
+                            <constraint firstItem="W4l-tD-BMD" firstAttribute="top" secondItem="PCr-i8-M5i" secondAttribute="bottom" constant="10" id="LgK-gg-v9S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PCr-i8-M5i" secondAttribute="trailing" constant="50" id="TRI-Mh-Kew"/>
+                            <constraint firstItem="mI0-xg-u8I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="UDk-aC-pO4"/>
+                            <constraint firstItem="NA7-ZB-n8x" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XHv-LL-PuR"/>
+                            <constraint firstItem="tMI-u8-6cG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ixk-mN-YuQ"/>
+                            <constraint firstItem="mI0-xg-u8I" firstAttribute="top" secondItem="W4l-tD-BMD" secondAttribute="bottom" constant="10" id="nvp-Ys-tCU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mI0-xg-u8I" secondAttribute="trailing" constant="50" id="o8W-Lq-erL"/>
+                            <constraint firstItem="PCr-i8-M5i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="tE5-so-MjL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tMI-u8-6cG" secondAttribute="trailing" constant="50" id="yW2-Xh-ATp"/>
+                            <constraint firstItem="mI0-xg-u8I" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-12" id="zTg-Qf-dpN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lottieView" destination="tTe-4U-TME" id="wpf-4z-KNs"/>
+                        <outlet property="passwordTextField" destination="vbM-yd-hG4" id="yhx-1m-OwQ"/>
+                        <outlet property="userTextField" destination="Le2-ej-2Ot" id="A8Y-3d-mnO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebook" width="25" height="25"/>
+        <image name="google" width="25" height="25"/>
+        <image name="twitter" width="25" height="20.5"/>
+    </resources>
 </document>
