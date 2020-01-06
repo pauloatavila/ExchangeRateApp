@@ -1,0 +1,33 @@
+PODS:
+  - Alamofire (5.0.0-beta.3)
+  - lottie-ios (3.0.6)
+  - RxAtomic (4.4.2)
+  - RxCocoa (4.4.2):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.4.2):
+    - RxAtomic (>= 4.4.2, ~> 4.4)
+
+DEPENDENCIES:
+  - Alamofire (= 5.0.0.beta.3)
+  - lottie-ios
+  - RxCocoa (= 4.4.2)
+  - RxSwift (= 4.4.2)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - lottie-ios
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 50d6fa7e8cbe7f84559e86ab641ffd029db655f8
+  lottie-ios: d030b6cda141cfd8bbaa3db89264785e6fdf675a
+  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
+  RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
+
+PODFILE CHECKSUM: 0775ff7299da70ce9a9d2a81388961af1cb6c58e
+
+COCOAPODS: 1.6.2
